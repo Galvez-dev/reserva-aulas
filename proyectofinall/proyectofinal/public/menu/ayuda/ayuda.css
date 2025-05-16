@@ -1,0 +1,43 @@
+.ayuda-container {
+    padding: 30px;
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+  }
+  
+  .ayuda-container h2 {
+    color: #00663f;
+    
+    margin-bottom: 10px;
+  }
+  
+  .intro {
+    margin-bottom: 40px; /* Espaciado entre la intro y la primera caja */
+    font-size: 16px;
+  }
+  
+  .faq-item {
+    background-color: #f4f4f4;
+    color: #00663f;
+    border-left: 6px solid ;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .faq-item h3 {
+    color: #00663f;
+    margin-bottom: 10px;
+  }
+  
+  .faq-item p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+  
+  .faq-item strong {
+    color: #1a9c5d; /* Verde para las palabras resaltadas */
+  }
+  

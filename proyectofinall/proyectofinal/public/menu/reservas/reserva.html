@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Reservar Aula</title>
+  <link rel="stylesheet" href="/menu/reservas/estilo.css" />
+</head>
+<body>
+  <div class="main-container">
+    <h2>Reservar Aula</h2>
+
+  </div>
+  <div class="reservas-container">
+    <h2>Aulas Disponibles</h2>
+    <!-- Las tarjetas de aulas se agregarán aquí dinámicamente -->
+  </div>
+
+    <div class="form-container">
+      <form id="reservaForm">
+        <label for="aula">ID Aula:</label>
+        <input type="number" id="aula" name="aula" required>
+
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" name="fecha" required>
+
+        <label for="horaInicio">Hora inicio:</label>
+        <input type="time" id="horaInicio" name="horaInicio" required>
+
+        <label for="horaFin">Hora fin:</label>
+        <input type="time" id="horaFin" name="horaFin" required>
+
+        <div class="btn-container">
+          <button type="submit" class="btn-reservar">Reservar</button>
+        </div>
+      </form>
+    </div>
+    
+   
+
+  <script src="/menu/reservas/reserva.js"></script>
+</body>
+</html>

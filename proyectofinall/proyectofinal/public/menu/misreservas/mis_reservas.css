@@ -1,0 +1,83 @@
+body {
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .reservas-container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+  
+  .reservas-container h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #2d572c;
+    margin-bottom: 40px;
+  }
+  
+  .reserva-card {
+    background-color: #f4fdf4;
+    border-radius: 16px;
+    padding: 25px;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid rgba(0, 128, 0, 0.1); /* borde sutil en verde */
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  /* Efecto hover moderno */
+  .reserva-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  }
+  
+  
+  .reserva-info p {
+    margin: 6px 0;
+    font-size: 15px;
+    color: #333;
+  }
+  
+  .reserva-info strong {
+    color: #2d572c;
+  }
+  
+  .reserva-actions {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .btn {
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .modificar {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  .modificar:hover {
+    background-color: #2980b9;
+  }
+  
+  .cancelar {
+    background-color: #e74c3c;
+    color: #fff;
+  }
+  
+  .cancelar:hover {
+    background-color: #c0392b;
+  }
+  
