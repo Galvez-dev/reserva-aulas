@@ -1,0 +1,194 @@
+/* Fondo general */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #d6f5d6, #90ee90);
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+/* Nube animada */
+.cloud {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: white;
+    border-radius: 100px;
+    opacity: 0.8;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.12);
+    top: 20%;
+    left: -250px;
+    animation: moveClouds 25s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    top: -30px;
+    left: 50px;
+}
+
+.cloud::after {
+    top: -20px;
+    left: 120px;
+}
+
+@keyframes moveClouds {
+    0% { left: -250px; }
+    100% { left: 100vw; }
+}
+
+/* Cabecera */
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(39, 83, 38, 0.95);
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* Efecto de escritura */
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    animation: typing 4s steps(40, end) forwards, blink 0.6s step-end 6;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+    100% { border-color: white; }
+}
+
+/* Contenedor del login */
+.login-container {
+    background: #ffffff;
+    padding: 40px 35px;
+    border-radius: 20px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+    text-align: center;
+    width: 380px;
+    animation: fadeIn 0.8s ease-in-out;
+    transition: all 0.3s ease;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* Título */
+h2 {
+    color: #2d572c;
+    font-size: 26px;
+    margin-bottom: 25px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Inputs */
+input {
+    width: 100%;
+    padding: 14px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 12px;
+    background: #f2f2f2;
+    box-shadow: inset 2px 2px 6px rgba(0,0,0,0.05), inset -2px -2px 6px rgba(255,255,255,0.8);
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    background: #ffffff;
+    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    outline: none;
+}
+
+/* Contenedor para mostrar/ocultar contraseña */
+.password-container {
+    position: relative;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #2d572c;
+}
+
+/* Botones */
+.btn, .btn-register {
+    width: 100%;
+    padding: 13px;
+    margin: 15px 0;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.btn {
+    background: linear-gradient(to right, #2d572c, #3fa34d);
+    color: white;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #1e9b3e, #34a853);
+    transform: scale(1.03);
+}
+
+.btn-register {
+    background: linear-gradient(to right, #a1f0a1, #85e085);
+    color: #2d572c;
+}
+
+.btn-register:hover {
+    background: linear-gradient(to right, #90e690, #6fd06f);
+    transform: scale(1.03);
+}
