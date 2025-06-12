@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Usuarios</title>
+  <link rel="stylesheet" href="gestionUsuarios/gestionusuarios.css"/>
+</head>
+<body>
+<main class="usuarios-container">
+  <div class="usuarios-header">
+    <h2>Gestión de Usuarios</h2>
+    <button class="btn-crear">➕ Crear Usuario</button>
+  </div>
+<div id="mensaje"></div>
+  <table class="tabla-usuarios">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+        <th>Correo</th>
+        <th>Contraseña</th>
+        <th>Rol</th>
+        <th>Teléfono</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody id="tablaUsuarios"></tbody>
+  </table>
+</main>
+
+<!-- Formulario emergente -->
+<div id="formularioEmergente" class="modal oculto">
+  <div class="modal-contenido">
+    <h3>Crear Usuario</h3>
+    <form id="formCrearUsuario">
+      <input type="text" name="id_usuario" placeholder="ID" required />
+<input type="text" name="nombre" placeholder="Nombre" required />
+<input type="email" name="correo" placeholder="Correo" required />
+<input type="password" name="contrasena" placeholder="Contraseña" required />
+<select name="rol" required>
+  <option value="">Seleccione Rol</option>
+  <option value="Administrador">Administrador</option>
+  <option value="Estudiante">Estudiante</option>
+  <option value="Maestro">Maestro</option>
+</select>
+<input type="text" name="telefono" placeholder="Teléfono" required />
+
+      <div class="botones-form">
+        <button type="submit" class="btn-guardar">Guardar</button>
+        <button type="button" class="btn-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+</body>
+</html>

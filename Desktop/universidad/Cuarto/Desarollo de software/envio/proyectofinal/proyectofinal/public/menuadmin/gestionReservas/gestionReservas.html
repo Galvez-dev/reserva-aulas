@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Reservas</title>
+    <link rel="stylesheet" href="gestionReservas/gestionReservas.css">
+</head>
+<body>
+    <main class="reservas-container">  
+        <div class="reservas-header">
+            <h2>Gestión de Reservas</h2>
+            <button class="btn-crear">➕ Crear Reserva</button>
+        </div>
+
+        <div id="mensaje"></div>
+
+        <table class="tabla-reservas">
+            <thead>
+                <tr>
+                <th>ID Reserva</th>
+                <th>Aula</th>
+                <th>Fecha</th>
+                <th>Hora Inicio</th>
+                <th>Hora Fin</th>
+                <th>Usuario</th>
+                <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="tablaReservas">
+                <!-- Las reservas se cargarán aquí -->
+            </tbody>
+            </table>
+    </main>
+
+    <!-- Modal para crear/editar reserva -->
+    <div id="modalReserva" class="modal oculto">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Crear Nueva Reserva</h3>
+                <span class="close">&times;</span>
+            </div>
+            <form id="formReserva">
+                <div class="form-group">
+                    <label for="aula">Aula:</label>
+                    <select id="aula" name="aula" required>
+                        <option value="">Seleccionar aula...</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="fecha">Fecha:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+                <div class="form-group">
+                    <label for="horaInicio">Hora Inicio:</label>
+                    <input type="time" id="horaInicio" name="horaInicio" required>
+                </div>
+                <div class="form-group">
+                    <label for="horaFin">Hora Fin:</label>
+                    <input type="time" id="horaFin" name="horaFin" required>
+                </div>
+                <div class="form-group">
+                    <label for="usuario">Usuario:</label>
+                    <select id="usuario" name="usuario" required>
+                        <option value="">Seleccionar usuario...</option>
+                    </select>
+                </div>
+                <div class="form-buttons">
+                    <button type="button" class="btn-cancel">Cancelar</button>
+                    <button type="submit" class="btn-submit">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="/menuadmin/gestionReservas/gestionReservas.js"></script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Aulas</title>
+  <link rel="stylesheet" href="gestionAulas/gestionAulas.css" />
+</head>
+<body>
+  <main class="usuarios-container">  
+    <div class="usuarios-header">
+      <h2>Gestión de Aulas</h2>
+      <button class="btn-crear">➕ Crear Aula</button>
+    </div>
+
+    <table class="tabla-aula">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Tipo</th>
+          <th>Capacidad</th>
+          <th>Disponible</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody id="tablaAulas"></tbody>
+
+    </table>
+  </main>
+<!-- Formulario emergente para crear aula -->
+<div id="formularioEmergente" class="modal oculto">
+  <div class="modal-contenido">
+    <h3>Crear Aula</h3>
+    <form id="formCrearAula">
+      <input type="text" name="id_aula" placeholder="ID del Aula" required />
+      <input type="text" name="Tipo" placeholder="Tipo de Aula" required />
+      <input type="number" name="capacidad" placeholder="Capacidad" required min="1" />
+      <select name="disponible" required>
+        <option value="">¿Disponible?</option>
+        <option value="1">Sí</option>
+        <option value="0">No</option>
+      </select>
+
+      <div class="botones-form">
+        <button type="submit" class="btn-guardar">Guardar</button>
+        <button type="button" class="btn-cancelar">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <script src="/menuadmin/gestionAulas/gestionAulas.js"></script>
+</body>
+</html>

@@ -1,0 +1,187 @@
+/* === Fondo general === */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(to bottom, #d6f5d6, #90ee90);
+    position: relative;
+}
+
+/* === Nube animada === */
+.cloud {
+    position: absolute;
+    width: 200px;
+    height: 100px;
+    background: white;
+    border-radius: 100px;
+    opacity: 0.8;
+    box-shadow: 10px 10px 25px rgba(0, 0, 0, 0.12);
+    top: 20%;
+    left: -250px;
+    animation: moveClouds 25s linear infinite;
+}
+
+.cloud::before,
+.cloud::after {
+    content: '';
+    position: absolute;
+    background: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
+
+.cloud::before { top: -30px; left: 50px; }
+.cloud::after  { top: -20px; left: 120px; }
+
+@keyframes moveClouds {
+    0% { left: -250px; }
+    100% { left: 100vw; }
+}
+
+/* === Cabecera === */
+.header-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(39, 83, 38, 0.85);
+    color: #ffffff;
+    text-align: center;
+    padding: 18px 0;
+    font-size: 22px;
+    font-weight: 600;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+    z-index: 1000;
+    backdrop-filter: blur(6px);
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+}
+
+/* === Efecto de escritura === */
+.typing-effect {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid white;
+    animation: typing 4s steps(40, end) forwards, blink 0.6s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+    100% { border-color: white; }
+}
+
+/* === Contenedor del login === */
+.login-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 50px 40px;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -60%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+/* === Título === */
+h2 {
+    color: #2d572c;
+    font-size: 28px;
+    margin-bottom: 28px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* === Inputs === */
+input {
+    width: 100%;
+    padding: 14px 16px;
+    margin: 12px 0;
+    border: none;
+    border-radius: 14px;
+    background: #f7f7f7;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.05), inset -2px -2px 5px rgba(255,255,255,0.7);
+    font-size: 15px;
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    background: #fff;
+    box-shadow: 0 0 12px rgba(63, 160, 81, 0.4);
+    outline: none;
+}
+
+/* === Contraseña con toggle === */
+.password-container {
+    position: relative;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    font-size: 16px;
+    color: #2d572c;
+    cursor: pointer;
+}
+
+/* === Botones === */
+.btn, .btn-register {
+    width: 100%;
+    padding: 13px;
+    margin: 16px 0;
+    border: none;
+    border-radius: 14px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.15);
+}
+
+.btn {
+    background: linear-gradient(to right, #2d572c, #3fa34d);
+    color: #ffffff;
+}
+
+.btn:hover {
+    background: linear-gradient(to right, #1fa146, #34b257);
+    transform: translateY(-2px);
+}
+
+.btn-register {
+    background: linear-gradient(to right, #a1f0a1, #85e085);
+    color: #2d572c;
+}
+
+.btn-register:hover {
+    background: linear-gradient(to right, #90e690, #6fd06f);
+    transform: translateY(-2px);
+}

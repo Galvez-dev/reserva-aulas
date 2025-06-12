@@ -1,0 +1,166 @@
+.usuarios-container {
+    margin: 40px auto;
+    max-width: 95%;
+    background: white;
+    padding: 30px 35px;
+    border-radius: 16px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.1);
+}
+
+.usuarios-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.usuarios-header h2 {
+    color: #2d572c;
+    font-size: 26px;
+    margin: 0;
+}
+
+.btn-crear {
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: bold;
+    background: linear-gradient(to right, #2d572c, #3fa34d);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.btn-crear:hover {
+    background: linear-gradient(to right, #1e9b3e, #34a853);
+    transform: scale(1.03);
+}
+
+.tabla-usuarios {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+}
+
+.tabla-usuarios thead {
+    background-color: #2d572c;
+    color: white;
+}
+
+.tabla-usuarios th,
+.tabla-usuarios td {
+    padding: 14px 16px;
+    text-align: left;
+}
+
+.tabla-usuarios tbody tr:nth-child(even) {
+    background-color: #f4fff4;
+}
+
+.btn-modificar,
+.btn-eliminar,
+.btn-guardar,
+.btn-cancelar {
+    border: none;
+    padding: 8px 14px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 6px;
+    font-weight: bold;
+}
+
+.btn-modificar {
+    background-color: #a3eaa3;
+    color: #145214;
+}
+
+.btn-modificar:hover {
+    background-color: #6fd06f;
+}
+
+.btn-eliminar {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.btn-eliminar:hover {
+    background-color: #c0392b;
+}
+
+.btn-guardar {
+    background-color: #6fd06f;
+    color: white;
+}
+
+.btn-guardar:hover {
+    background-color: #2980b9;
+}
+
+.btn-cancelar {
+    background-color: #bdc3c7;
+    color: #2c3e50;
+}
+
+.btn-cancelar:hover {
+    background-color: #95a5a6;
+}
+
+.tabla-usuarios input[type="text"] {
+    width: 100%;
+    padding: 6px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+/* Modal emergente */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.modal-contenido {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-contenido h3 {
+  margin-top: 0;
+  color: #2d572c;
+  text-align: center;
+}
+
+.modal-contenido input,
+.modal-contenido select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+}
+
+.botones-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal.oculto {
+  display: none;
+}
